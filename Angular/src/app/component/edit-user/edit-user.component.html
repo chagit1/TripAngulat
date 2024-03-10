@@ -1,0 +1,57 @@
+
+<form (ngSubmit)="send()" [formGroup]="f">
+    <div class="form-group">
+
+        <label for="exampleInputfirstName1">first name</label>
+        <input type="text" formControlName="firstName" class="form-control" id="exampleInputfirstName"
+            aria-describedby="emailHelp" placeholder="Enter first name" [(ngModel)]="users.firstName" >
+        <div *ngIf="getFirstName.invalid && (getFirstName.touched || getFirstName.dirty)">
+            <p *ngIf="getFirstName.hasError('required')"> Required field</p>
+        </div>
+
+        <label for="exampleInputlastName1"> last name</label>
+        <input type="text" formControlName="lastName" class="form-control" id="exampleInputlastName1"
+            aria-describedby="emailHelp" placeholder="Enter last name" [(ngModel)]="users.lastName">
+        <div *ngIf="getLastName.invalid && (getLastName.touched || getLastName.dirty)">
+            <p *ngIf="getLastName.hasError('required')"> Required field</p>
+        </div>
+
+        <label for="exampleInputphone1">phone</label>
+        <input type="text" formControlName="phone" class="form-control" id="exampleInputphone"
+            aria-describedby="emailHelp" placeholder="Enter phone" [(ngModel)]="users.phone">
+        <div *ngIf="getPhone.invalid && (getPhone.touched || getPhone.dirty)">
+            <p *ngIf="getPhone.hasError('required')">Required field</p>
+            <p *ngIf="getPhone.hasError('min')">too short</p>
+            <p *ngIf="getPhone.hasError('maxLength')">too long</p>
+        </div>
+
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="email" formControlName="email" class="form-control" id="exampleInputEmail"
+            aria-describedby="emailHelp" placeholder="Enter email" [(ngModel)]="users.email">
+        <div *ngIf="getEmail.invalid && (getEmail.touched || getEmail.dirty)">
+            <p *ngIf="getEmail.hasError('invalid')"> להכניס ערך חוקי</p>
+        </div>
+
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword" placeholder="Password"
+            formControlName="loginPassword" [(ngModel)]="users.loginPassword">
+        <div *ngIf="getPass.invalid && (getPass.touched || getPass.dirty)">
+            <p *ngIf="getPass.hasError('required')">Required field </p>
+            <p *ngIf="getPass.hasError('minLength')">too short</p>
+            <p *ngIf="getPass.hasError('maxLength')">too long</p>
+        </div>
+
+        <div class="mb-3">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="disabledFieldsetCheck"
+                    formControlName="firstAiderCtificate"[(ngModel)]="users.firstAiderCtificate">
+                <label class="form-check-label" for="disabledFieldsetCheck">
+                    firstAiderCtificate
+                </label>
+            </div>
+        </div>
+
+    </div>
+    <input type="submit" class="btn btn-primary" [disabled]="f.invalid">
+    <input type="button" value="delate" class="btn btn-primary" [disabled]="f.invalid" (click)="delate()">
+</form>

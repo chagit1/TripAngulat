@@ -1,0 +1,78 @@
+
+<div class="card" >
+  <p-table [value]="ListUser" [tableStyle]="{ 'min-width': '50rem' }">
+      <ng-template pTemplate="header">
+          <tr>
+              <th>FirstName</th>
+              <th>lastName</th>
+              <th>Email</th>
+              <th>Phone</th>
+          </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-product  >
+          <tr >
+              <td>{{product.firstName}}</td>
+              <td>{{ product.lastName }}</td>
+              <td>{{ product.email }}</td>
+              <td>{{ product.phone }}</td>
+          </tr>
+      </ng-template>
+  </p-table>
+</div>
+
+<!-- <p>all-user works!</p>
+<button (click)="AllUser()">all user</button>
+<h1 *ngFor="let u of ListUser">
+    <h4>{{u.UserId}}</h4>
+    <h4>{{u.FirstName}}</h4>
+    <h4>{{u.LastName}}</h4>
+    <h4>{{u.Phone}}</h4>
+</h1>
+ -->
+ <!-- <button (click)="AllUser()">all user</button>
+
+ <table>
+     <tr>
+         <th>קוד</th>
+         <th>שם</th>
+         <th>ברכה</th>
+         <th>תמונה</th>
+         <th>מחיקה</th>
+     </tr>
+     <tr *ngFor="let f of ListUser">
+         <td>{{f.userId}}</td>
+         <td>{{f.lastName}}</td>
+         <td>{{f.phone}}</td>
+         <td>aaaaa</td> -->
+         <!-- <td><img src="../../../assets/pics/{{f.Pic}}" width="100px"></td>
+     <td><img [src]="f.Pic" width="100px"></td> -->
+         <!-- <td><button (click)="del(f.Id!)">מחק</button></td> --> 
+     <!-- </tr>
+ </table> -->
+
+ <!-- <div class="card">
+    <div class="bg-image hover-overlay" mdbRipple rippleColor="light">
+      <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/111.webp" class="img-fluid"/>
+      <a href="#!">
+        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+      </a>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#!" class="btn btn-primary">Button</a>
+    </div>
+  </div> -->
+<!-- 
+  <div class="card" style="width: 25rem;">
+    <img src="../../../assets/picture/budapest.png" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+
+    </div>
+  </div> -->
+
+
+

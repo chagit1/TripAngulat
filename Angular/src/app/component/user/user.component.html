@@ -1,0 +1,33 @@
+<!-- <div class="card flex justify-content-center">
+    <p-toast></p-toast>
+    <p-menu #menu [model]="items" [popup]="true"></p-menu>
+    <button pButton type="button" (click)="menu.toggle($event)" icon="pi pi-bars" label="Show"></button>
+</div> -->
+<!-- <button class="btn btn-primary"  *ngIf="user.firstName!=null" (click)="show()">show trip</button>
+<button class="btn btn-primary"  (click)="()">edit</button> -->
+<!-- <div class="card flex justify-content-center gap-2">
+    <p-confirmPopup></p-confirmPopup>
+    <p-button *ngIf="user.firstName!=null" (click)="confirm()" icon="pi pi-check" label="show trip"></p-button> -->
+    <!-- <p-button  *ngIf="user.firstName!=null" (click)="edit()" icon="pi pi-times"label="edit"></p-button> -->
+    <!-- <p-button  *ngIf="userU.firstName=null" (click)="edit()" icon="pi pi-times" severity="danger">edit</p-button> -->
+<!-- </div> -->
+
+
+
+
+
+
+<!-- <div class="card flex justify-content-center"> -->
+    <p-overlayPanel #op>
+        <p-button *ngIf="user.firstName!=null" (click)="show()" icon="pi pi-bars" label="show trip"></p-button>
+        <p-button *ngIf="user.firstName!=null" (click)="edit()" icon="pi pi-pencil" label="edit"></p-button>
+        <p-button *ngIf="user.firstName==null" (click)="allUser()" icon="pi pi-pencil" label="all user"></p-button>
+
+    </p-overlayPanel>
+      <p-avatar icon="pi pi-user" styleClass="mr-2" shape="circle" size="large" (click)="op.toggle($event)"  [label]="serU.currentUser.firstName"> </p-avatar>
+
+    <!-- <p-button (click)="op.toggle($event)" icon="pi pi-image" [label]="serU.currentUser.firstName"></p-button> -->
+<!-- </div> -->
+<!--  -->
+<router-outlet></router-outlet>
+<!-- <p-button label="Secondary" [text]="true" severity="secondary" (onClick)=""></p-button> -->

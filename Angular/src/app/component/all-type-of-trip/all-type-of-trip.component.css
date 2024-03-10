@@ -1,0 +1,19 @@
+.ariaCard{
+    display: flex; 
+    align-items: center;
+    flex-wrap: wrap;
+  justify-content: center ;
+  justify-content: space-evenly;
+}
+.type{
+  width: 150px;
+  height: 150px;
+  border-radius: 75px;
+  border: 1px solid #062C66;
+}
+
+.a{
+  display: table-row;
+  font-size: larger;
+
+}

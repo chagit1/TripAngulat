@@ -1,0 +1,9 @@
+
+<div class="ariaCard">
+  <p-card *ngFor="let f of ListTrip" (click)="GetDetails(f.tripId)" [header]="f.target" [style]="{ width: '300px'  }">
+    <ng-template pTemplate="header">
+      <img [src]="serTript.image + f.image+ '.jpg'" alt="Photo of a Shiba Inu" class="pic">
+    </ng-template>
+    <label>{{f.dateTrip}}</label>
+  </p-card>
+</div>

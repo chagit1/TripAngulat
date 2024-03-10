@@ -1,0 +1,70 @@
+<!-- <div >
+<h2>Booking</h2>
+<p>Please enter the number of booking places:</p>
+<input type="number" [(ngModel)]="numOfPlaces" required>
+<button (click)="confirmBooking()">Confirm</button>
+</div > -->
+
+
+
+
+
+
+<div class="flex flex-column align-items-center p-5 surface-overlay border-round">
+    <p-toast></p-toast>
+    <!-- <div class="flex flex-column align-items-center p-5 surface-overlay border-round">
+        <div class="border-circle bg-primary inline-flex justify-content-center align-items-center h-6rem w-6rem -mt-8">
+            <i class="pi-cart-plus"></i>
+        </div> -->
+        <span class="font-bold text-2xl block mb-2 mt-4">Please enter the number of booking places:</span>
+    
+        <!-- <span class="font-bold text-2xl block mb-2 mt-6"></span> -->
+        <!-- <p class="mb-4"></p> -->
+        <p-inputNumber [(ngModel)]="numOfPlaces" [style]="{'width': '4rem'}" [showButtons]="true" buttonLayout="vertical" spinnerMode="vertical" inputId="vertical" decrementButtonClass="p-button-secondary"
+        incrementButtonClass="p-button-secondary" incrementButtonIcon="pi pi-plus" decrementButtonIcon="pi pi-minus"></p-inputNumber>
+
+        <!-- <input pInputText pKeyFilter="int" placeholder="Integers" [(ngModel)]="numOfPlaces" required> -->
+        <div class="flex align-items-center gap-2 mt-4">
+           
+            <button pButton label="invent" (click)="confirmBooking()" class="w-6rem"></button>
+            <!-- <p-button label="Success"  [text]="true" [raised]="true" severity="success" (click)="confirmBooking()"></p-button> -->
+
+            <button pButton label="Cancel" (click)="reject()" class="p-button-outlined w-6rem "></button>
+        </div>
+    </div>
+
+<!-- </div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+<div class="card flex justify-content-center">
+    <p-toast></p-toast>
+    <p-confirmDialog #cd>
+        <ng-template pTemplate="headless" let-message>
+            <div class="flex flex-column align-items-center p-5 surface-overlay border-round">
+                <div class="border-circle bg-primary inline-flex justify-content-center align-items-center h-6rem w-6rem -mt-8">
+                    <i class="pi pi-question text-5xl"></i>
+                </div>
+                <span class="font-bold text-2xl block mb-2 mt-4"></span>
+                <p class="mb-0">Please enter the number of booking places:</p>
+                <div class="flex align-items-center gap-2 mt-4">
+                    <input pInputText pKeyFilter="int" placeholder="Integers" [(ngModel)]="value" />
+                    <button pButton label="Save" (click)="cd.accept()" class="w-8rem"></button>
+                    <button pButton label="Cancel" (click)="cd.reject()" class="p-button-outlined w-8rem "></button>
+                </div>
+            </div>
+        </ng-template>
+    </p-confirmDialog>
+    </div> -->

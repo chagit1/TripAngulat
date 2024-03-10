@@ -1,0 +1,132 @@
+<form (ngSubmit)="send()" [formGroup]="f" class="a">
+  <div class="surface-card p-4 shadow-2 border-round w-full lg:w-6">
+    <div class="text-center mb-5">
+      <img src="../../../assets/picture/Logo.png" alt="Image" height="150" class="mb-3">
+      <div class="text-900 text-3xl font-medium mb-3">Welcome Back</div>
+      <span class="text-600 font-medium line-height-3">Don't have an account?</span>
+      <a class="font-medium no-underline ml-2 text-blue-500 cursor-pointer" (click)="toRegister()">Create today!</a>
+    </div>
+    <div>
+      <label for="email1" class="block text-900 font-medium mb-2">Email</label>
+      <input id="email1" type="text" placeholder="Email address" pInputText class="w-full mb-3" formControlName="email"
+        [(ngModel)]="users.email">
+      <div *ngIf="getEmail.invalid && (getEmail.touched || getEmail.dirty)">
+        <p *ngIf="getEmail.hasError('required')"> Required field</p>
+        <p *ngIf="getEmail.hasError('invalid')"> להכניס ערך חוקי</p>
+      </div>
+
+      <label for="password1" class="block text-900 font-medium mb-2">Password</label>
+      <input id="password1" type="password" placeholder="Password" pInputText class="w-full mb-3"
+        formControlName="loginPassword" [(ngModel)]="users.loginPassword">
+      <div *ngIf="getPass.invalid && (getPass.touched || getPass.dirty)">
+        <p *ngIf="getPass.hasError('required')">Required field </p>
+        <!-- שמות בדיקות התקינות באותיות קטנות גם כמה מילים -->
+        <p *ngIf="getPass.hasError('minLength')">too short</p>
+        <!-- בבדיקת תקינות אישית יש לכתוב את שם הערך שהפונקציה מחזירה -->
+        <p *ngIf="getPass.hasError('maxLength')">too long</p>
+      </div>
+
+      <div class="flex align-items-center justify-content-between mb-6">
+        <div class="flex align-items-center">
+          <p-checkbox id="rememberme1" [binary]="true" styleClass="mr-2"></p-checkbox>
+          <label for="rememberme1" class="text-900">Remember me</label>
+        </div>
+        <a class="font-medium no-underline ml-2 text-blue-500 text-right cursor-pointer">Forgot password?</a>
+      </div>
+
+      <button pButton pRipple label="Sign In" icon="pi pi-user" class="w-full" [disabled]="f.invalid"></button>
+    </div>
+  </div>
+
+</form>
+
+
+
+
+
+
+
+
+<!-- <p>login works!</p>
+
+
+
+<form (ngSubmit)="send()" [formGroup]="f">
+  <div class="form-group">
+
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" formControlName="email" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp"
+      placeholder="Enter email" [(ngModel)]="users.email">
+    <div *ngIf="getEmail.invalid && (getEmail.touched || getEmail.dirty)">
+      <p *ngIf="getEmail.hasError('required')">שדה חובה</p>
+      <p *ngIf="getEmail.hasError('invalid')"> להכניס ערך חוקי</p>
+    </div>
+
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword" placeholder="Password"
+      formControlName="loginPassword" [(ngModel)]="users.loginPassword">
+    <div *ngIf="getPass.invalid && (getPass.touched || getPass.dirty)">
+      <p *ngIf="getPass.hasError('required')">Required field </p>
+      שמות בדיקות התקינות באותיות קטנות גם כמה מילים
+      <p *ngIf="getPass.hasError('minLength')">too short</p>
+      בבדיקת תקינות אישית יש לכתוב את שם הערך שהפונקציה מחזירה
+      <p *ngIf="getPass.hasError('maxLength')">too long</p>
+    </div>
+
+  </div>
+  <input type="submit" class="btn btn-primary" [disabled]="f.invalid">
+</form>
+ -->
+<!-- 
+
+
+
+<div class="surface-card p-4 shadow-2 border-round w-full lg:w-6">
+  <div class="text-center mb-5">
+      <img src="assets/images/blocks/logos/hyper.svg" alt="Image" height="50" class="mb-3">
+      <div class="text-900 text-3xl font-medium mb-3">Welcome Back</div>
+      <span class="text-600 font-medium line-height-3">Don't have an account?</span>
+      <a class="font-medium no-underline ml-2 text-blue-500 cursor-pointer">Create today!</a>
+  </div>
+
+  <div>
+      <label for="email1" class="block text-900 font-medium mb-2">Email</label>
+      <input id="email1" type="text" placeholder="Email address" pInputText class="w-full mb-3">
+
+      <label for="password1" class="block text-900 font-medium mb-2">Password</label>
+      <input id="password1" type="password" placeholder="Password" pInputText class="w-full mb-3">
+
+      <div class="flex align-items-center justify-content-between mb-6">
+          <div class="flex align-items-center">
+              <p-checkbox id="rememberme1" [binary]="true" styleClass="mr-2"></p-checkbox>
+              <label for="rememberme1" class="text-900">Remember me</label>
+          </div>
+          <a class="font-medium no-underline ml-2 text-blue-500 text-right cursor-pointer">Forgot password?</a>
+      </div>
+
+      <button pButton pRipple label="Sign In" icon="pi pi-user" class="w-full"></button>
+  </div>
+</div>
+
+
+<p-card header="Advanced Card" subheader="Card Subheader" [style]="{ width: '1000px' }">
+<div class="flex flex-column md:flex-row">
+  <div class="w-full md:w-5 flex flex-column align-items-center justify-content-center gap-3 py-5">
+      <div class="flex flex-wrap justify-content-center align-items-center gap-2">
+          <label class="w-6rem">Username</label>
+          <input pInputText id="username" type="text" class="w-12rem" />
+      </div>
+      <div class="flex flex-wrap justify-content-center align-items-center gap-2">
+          <label class="w-6rem">Password</label>
+          <input pInputText id="password" type="password" class="w-12rem" />
+      </div>
+      <p-button label="Login" icon="pi pi-user" styleClass="w-10rem mx-auto"></p-button>
+  </div>
+  <div class="w-full md:w-2">
+      <p-divider layout="vertical" styleClass="hidden md:flex"><b>OR</b></p-divider>
+      <p-divider layout="horizontal" styleClass="flex md:hidden" [align]="'center'"><b>OR</b></p-divider>
+  </div>
+  <div class="w-full md:w-5 flex align-items-center justify-content-center py-5">
+      <p-button label="Sign Up" icon="pi pi-user-plus" styleClass="p-button-success w-10rem"></p-button>
+  </div>
+</div> -->

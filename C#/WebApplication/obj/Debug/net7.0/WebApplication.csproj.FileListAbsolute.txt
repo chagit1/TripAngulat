@@ -1,0 +1,7 @@
+C:\Users\This User\Documents\Angular\Project\C#\WebApplication\obj\Debug\net7.0\WebApplication.csproj.AssemblyReference.cache
+C:\Users\This User\Documents\Angular\Project\C#\WebApplication\obj\Debug\net7.0\WebApplication.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\This User\Documents\Angular\Project\C#\WebApplication\obj\Debug\net7.0\WebApplication.AssemblyInfoInputs.cache
+C:\Users\This User\Documents\Angular\Project\C#\WebApplication\obj\Debug\net7.0\WebApplication.AssemblyInfo.cs
+C:\Users\This User\Documents\Angular\Project\C#\WebApplication\obj\Debug\net7.0\WebApplication.csproj.CoreCompileInputs.cache
+C:\Users\This User\Documents\Angular\Project\C#\WebApplication\obj\Debug\net7.0\WebApplication.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\This User\Documents\Angular\Project\C#\WebApplication\obj\Debug\net7.0\WebApplication.MvcApplicationPartsAssemblyInfo.cache

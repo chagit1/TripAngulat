@@ -1,0 +1,69 @@
+@import "primeicons/primeicons.css";
+
+body {
+    font-family: var(--font-family);
+    color: #062C66;
+    font-style: var(--border-color)#062C66;
+    font-weight: normal;
+    background: var(--surface-ground);
+    color: var(--text-color);
+    padding: 1rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+}
+
+/* .card {
+    background: var(--surface-card);
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    float: left;
+  width: 25%;
+  padding: 10px;
+  height: 300px;
+ 
+
+} */
+
+.card{
+  display: flex; 
+  align-items: center;
+  flex-wrap: wrap;
+justify-content: space-between;
+background: none;
+
+}
+
+
+:root {
+  --color-shades-dark: rgb(25, 25, 25);
+  --color-shades-light: rgb(165, 167, 175);
+}
+
+/* Use the alternative box model */
+* {
+  box-sizing: border-box;
+}
+
+
+
+/* Basic link styling */
+a {
+  color: var(--text-color);
+  display: inline-block;
+  margin-block-end: 0.5rem;
+  margin-inline-end: 0.5rem;
+  padding: 2rem;
+  text-decoration: none;
+  font-size: large;
+}
+
+/* Change the border-color on :hover and :focus */
+a:where(:hover, :focus) {
+  --border-color: var(--text-color);
+}
+.logo{
+  margin-right: 1rem;
+  
+}
